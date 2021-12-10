@@ -12,7 +12,7 @@ const NavBar = ({ user }) => {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navBarParent">
             <div className="container-fluid">
             <NavLink className="navbar-brand" to="/">
                 Memorabilia
@@ -120,5 +120,5 @@ const NavBar = ({ user }) => {
             </div>
         </nav>
     );
-    }
+}
 export default NavBar;

@@ -2,6 +2,8 @@ import axios from "axios";
 import React,{Component} from 'react';
 import reactDom from 'react-dom';
 import NavBar from "./NavBar/NavBar"
+import "./App.css"
+import LogIn from "./LogIn/LogIn"
 
 
 class App extends Component {
@@ -10,7 +12,9 @@ class App extends Component {
     }
     render(){
         return(
-            <NavBar />
+            <div className="wrappingParent">
+                <NavBar />
+            </div>
             )
         }
 }
