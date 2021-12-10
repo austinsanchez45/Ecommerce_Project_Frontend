@@ -15,4 +15,10 @@ function App() {
         }
         catch{}
     }, [])
+
+    return (
+        <Router>
+            <NavBar user = {user} />
+        </Router>
+    )
 }
