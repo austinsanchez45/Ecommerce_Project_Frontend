@@ -1,10 +1,12 @@
 import axios from "axios";
 import React,{Component} from 'react';
 import reactDom from 'react-dom';
-import NavBar from "./NavBar/NavBar"
 import "./App.css"
-import LogIn from "./LogIn/LogIn"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Products from "./Products/Products";
+import NavBar from "./NavBar/NavBar";
+import LogIn from "./LogIn/LogIn";
+import LandingPage from "./LandingPage/LandingPage";
 
 
 class App extends Component {
@@ -19,9 +21,8 @@ class App extends Component {
 
     render(){
         return(
-            <div className="wrappingParent">
+            <div className="App">
                 <NavBar />
-                <Products list={this.state.showProdcuts}/>
             </div>
             )
         }
