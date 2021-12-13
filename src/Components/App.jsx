@@ -2,7 +2,7 @@ import axios from "axios";
 import React,{Component} from 'react';
 import reactDom from 'react-dom';
 import "./App.css"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Route, Switch, Redirect } from "react-router-dom";
 import Products from "./Products/Products";
 import NavBar from "./NavBar/NavBar";
 import LogIn from "./LogIn/LogIn";
@@ -19,15 +19,15 @@ class App extends Component {
     }
 
     componentDidMount() {
-        const jwt = localStorage.getItem('token');
-        try{
-            const user = jwtDecode(jwt)
-            this.setState({
-                user
-            });
-        } catch {
+        // const jwt = localStorage.getItem('token');
+        // try{
+        //     const user = jwtDecode(jwt)
+        //     this.setState({
+        //         user
+        //     });
+        // } catch {
 
-        }
+        // }
     }
 
     showProdcuts = async()=>{
