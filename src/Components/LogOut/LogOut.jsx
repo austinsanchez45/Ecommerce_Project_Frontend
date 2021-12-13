@@ -1,6 +1,6 @@
 import {Component} from 'react';
 
-class Logout extends Component{
+class LogOut extends Component{
 
     componentDidMount(){
         localStorage.removeItem('token');
@@ -11,4 +11,4 @@ class Logout extends Component{
     }
 }
 
-export default Logout;
+export default LogOut;

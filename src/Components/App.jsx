@@ -43,9 +43,9 @@ class App extends Component {
                 <NavBar user = {user} />
                 <div>
                     <Routes>
-                        <Route path="/" exact component={LandingPage} />
-                        <Route path="/login" component={LogIn} />
-                        <Route path="/logout" component={LogOut} />
+                        <Route path="/" exact element={<LandingPage/>} />
+                        <Route path="/login" element={<LogIn/>} />
+                        <Route path="/logout" element={<LogOut/>} />
                         {/* <Route path="/not-found" component={NotFound} /> */}
                         {/* <Route to="/not-found"/> */}
                     </Routes>

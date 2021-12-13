@@ -8,18 +8,22 @@ function LogIn(props){
         <div className="signInParent">
             <form>
                 <div class="formFloating">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="johnsmith@gmail.com">
-                        <label for="floatInput">Email Address</label>
-                    </input>
+                    {/* <input type="email" class="form-control" id="floatingInput" placeholder="johnsmith@gmail.com">
+                        <label for="floatInput">Email Address</>
+                    /> */}
+                    <label for ="">
+                        Email Address
+                        <input id=""/>
+                    </label>
                 </div>
-                <div class="formFloating">
+                {/* <div class="formFloating">
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Password</label>
                     </input>
                 </div>
                 <div className="signInButtonParent">
                     <button class="signInButton" type="submit">Sign In</button>
-                </div>
+                </div> */}
             </form>
         </div>
     )

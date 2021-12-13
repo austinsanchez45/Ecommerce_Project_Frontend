@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 const NavBar = ({ user }) => {
     return (
-        <nav>
-            <ul>
+        <div>
             {user && <h4>Welcome {user.username}</h4>}
+            <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to = "/">Home</Link>
                 </li>
                 <li>
                     <Link to="/profile">Profile</Link>
@@ -28,12 +28,12 @@ const NavBar = ({ user }) => {
                 {user &&
                     <React.Fragment>
                         <li>
-                            <Link to="/logout">Logout</Link>
-                        </li>
-                    </React.Fragment>
-                }
+                            <Link to="logout">Logout</Link>
+                    </li>
+                </React.Fragment>
+            }
             </ul>
-        </nav>
+        </div>
     );
 }
-export default NavBar
+export default NavBar;
