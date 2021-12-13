@@ -32,6 +32,9 @@ const NavBar = ({ user }) => {
                     </li>
                 </React.Fragment>
             }
+                <li>
+                    <Link to="/products">Products</Link>
+                </li>
             </ul>
         </div>
     );
