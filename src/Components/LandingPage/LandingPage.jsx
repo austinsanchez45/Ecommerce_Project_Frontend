@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-function LandingPage(props){
+const LandingPage = (props)=>{
     return(
         <div className="LandingPageParent">
             <div className="container-fluid">
