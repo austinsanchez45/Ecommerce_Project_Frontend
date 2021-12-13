@@ -1,4 +1,5 @@
 import React from 'react';
+import "./LandingPage.css"
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -11,7 +12,7 @@ const LandingPage = (props)=>{
             </div>
             <div class="HomeButtons">
                 <button className="LogInButton" type="submit">Log In</button>
-                <button className="SignUpButton" type="submit">Sign In</button>
+                <button className="SignUpButton" type="submit">Sign Up</button>
             </div>
         </div>
     );
