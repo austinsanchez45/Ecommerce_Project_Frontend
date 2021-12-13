@@ -45,6 +45,7 @@ class App extends Component {
                         <Route path="/" exact element={<LandingPage/>} />
                         <Route path="/login" element={<LogIn/>} />
                         <Route path="/logout" element={<LogOut/>} />
+                        <Route path="/signup" element={<SignUp/>} />
                         <Route path="/products" element={<Products/>} />
                         <Route path="/not-found" component={NotFound} />
                         <Route to="/not-found"/>
