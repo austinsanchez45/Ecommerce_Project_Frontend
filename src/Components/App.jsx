@@ -7,11 +7,24 @@ import Products from "./Products/Products";
 import NavBar from "./NavBar/NavBar";
 import LogIn from "./LogIn/LogIn";
 import LandingPage from "./LandingPage/LandingPage";
+import jwtDecode from "jwt-decode";
 
 
 class App extends Component {
     constructor(props){
         super(props);
+    }
+
+    componentDidMount() {
+        const jwt = localStorage.getItem('token');
+        try{
+            const user = jwtDecode(jwt)
+            this.getSnapshotBeforeUpdate({
+                user
+            });
+        } catch {
+            
+        }
     }
 
     showProdcuts = async()=>{
