@@ -19,11 +19,11 @@ class App extends Component {
         const jwt = localStorage.getItem('token');
         try{
             const user = jwtDecode(jwt)
-            this.getSnapshotBeforeUpdate({
+            this.setState({
                 user
             });
         } catch {
-            
+
         }
     }
 
