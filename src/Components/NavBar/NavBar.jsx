@@ -6,34 +6,34 @@ import { Link } from "react-router-dom";
 
 const NavBar = ({ user }) => {
     return (
-        <div>
+        <div className="NavParent">
             {user && <h4>Welcome {user.username}</h4>}
-            <ul>
+            <ul className = "Nav">
                 <li>
-                    <Link to = "/">Home</Link>
+                    <Link className="HomeNav" to = "/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/profile">Profile</Link>
+                    <Link className="ProfileNav" to="/profile">Profile</Link>
                 </li>
                 {!user &&
                     <React.Fragment>
                         <li>
-                            <Link to="/signup">Sign Up</Link>
+                            <Link className="SignupNav" to="/signup">Sign Up</Link>
                         </li>
                         <li>
-                            <Link to="/login">Log In</Link>
+                            <Link className="LoginNav" to="/login">Log In</Link>
                         </li>
                     </React.Fragment>
                 }
                 {user &&
                     <React.Fragment>
                         <li>
-                            <Link to="logout">Logout</Link>
+                            <Link className="LogoutNav" to="logout">Logout</Link>
                     </li>
                 </React.Fragment>
             }
                 <li>
-                    <Link to="/products">Products</Link>
+                    <Link className="ProductsNav" to="/products">Products</Link>
                 </li>
             </ul>
         </div>
