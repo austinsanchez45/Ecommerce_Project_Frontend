@@ -8,6 +8,9 @@ import NavBar from "./NavBar/NavBar";
 import LogIn from "./LogIn/LogIn";
 import LandingPage from "./LandingPage/LandingPage";
 import jwtDecode from "jwt-decode";
+import NotFound from "./NotFound/NotFound";
+import SignUp from "./SignUp/SignUp";
+import LogOut from "./LogOut/LogOut";
 
 
 class App extends Component {
@@ -33,11 +36,31 @@ class App extends Component {
     }
 
     render(){
+        const user = this.state.user;
         return(
             <div className="App">
-                <NavBar />
+                <NavBar user={user}/>
+                <div>
+                    <Switch>
+                        <Route path="/profile" render={props => {
+                            if (!user){
+                                return <Redirect to="/login" />;
+                            }else{
+                                return <ProfileScreen {...props} user={user} />
+                            }
+                        }}
+                        />
+                        <Route path="/signup" compononent={SignUp} />
+                        <Route path="/login" component={LogIn} />
+                        <Route path="/logout" component={LogOut} />
+                        <Route path="/not-found" component={NotFound} />
+                        <Route path="/" exact component={LandingPage} />
+                        <Redirect to="/not-found"/>
+                    </Switch>
+                </div>
             </div>
-            )
-        }
+        );
+    }
 }
 export default App;
+
